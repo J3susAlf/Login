@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="box signin">
+        <h2>Ya tiene una cuenta?</h2>
+        <button class="signinBtn">Iniciar Sesión</button>
+      </div>
+      <div class="box signup">
+        <h2>No tienes Una cuenta?</h2>
+        <button class="signupBtn">Inscribirse</button>
+      </div>
+      <div class="formBx">
+        <div class="form signinform">
+          <form action="">
+            <h3>Iniciar sesión</h3>
+            <input type="text" placeholder="Usuario" />
+            <input type="password" placeholder="Contraseña" />
+            <button type="submit" placeholder="Iniciar">Enviar</button>
+            <a href="#" class="forgot"> Olvidaste tu contraseña?</a>
+          </form>
+        </div>
+
+        <div class="form signupform">
+          <form action="">
+            <h3>Inscribirse</h3>
+            <input type="text" placeholder="Usuario" />
+            <input type="text" placeholder="Correo Electronico" />
+            <input type="password" placeholder="Contraseña" />
+            <input type="password" placeholder="Confirmar" />
+            <button type="submit" placeholder="Registro">Guardar</button>
+            <a href="#" class="forgot"> Olvidaste tu contraseña?</a>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script>
+      let signinBtn = document.querySelector(".signinBtn");
+      let signupBtn = document.querySelector(".signupBtn");
+      let body = document.querySelector("body");
+
+      signupBtn.onclick = function () {
+        body.classList.add("slide");
+      };
+      signinBtn.onclick = function () {
+        body.classList.remove("slide");
+      };
+    </script>
+  </body>
+</html>
